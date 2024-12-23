@@ -20,6 +20,7 @@
     "io.extendreality.tilia.camerarigs.xrpluginframework.unity": "2.1.14",
     "io.extendreality.tilia.indicators.objectpointers.unity": "2.2.16",
     "io.extendreality.tilia.input.unityinputsystem": "2.4.11",
+    "io.extendreality.tilia.interactions.controllables.unity": "2.10.31",
     "io.extendreality.tilia.interactions.interactables.unity": "2.18.1",
     "io.extendreality.tilia.locomotors.teleporter.unity": "2.2.4",
     "com.unity.modules.accessibility": "1.0.0",
