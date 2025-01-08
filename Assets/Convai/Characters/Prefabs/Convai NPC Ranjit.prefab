@@ -234,7 +234,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   characterName: Ranjit
-  characterID: 4da12986-c85c-11ef-a1c0-42010a7be016
+  characterID: d18e5066-c85c-11ef-858b-42010a7be016
   sessionID: -1
   isCharacterActive: 0
   actionsHandler: {fileID: 0}

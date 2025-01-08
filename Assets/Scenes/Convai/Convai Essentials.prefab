@@ -427,7 +427,7 @@ PrefabInstance:
       objectReference: {fileID: 5104974080613312044, guid: 1fc76c3805534804aa66341a6e163e3f, type: 3}
     - target: {fileID: 5231986068629599735, guid: 2b29ead59f5c4da43a05acc5a14cd02b, type: 3}
       propertyPath: characters.Array.size
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5231986068629599735, guid: 2b29ead59f5c4da43a05acc5a14cd02b, type: 3}
       propertyPath: characters.Array.data[0].characterName
