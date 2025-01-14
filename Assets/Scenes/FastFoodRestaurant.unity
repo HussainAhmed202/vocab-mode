@@ -2204,6 +2204,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7127022810053228397, guid: 0f0da665e2e6a3442962a36bbebbc21c, type: 3}
+      propertyPath: _trackingOriginType
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7127022810053228397, guid: 0f0da665e2e6a3442962a36bbebbc21c, type: 3}
       propertyPath: dynamicResolutionVersion
       value: 1
       objectReference: {fileID: 0}
