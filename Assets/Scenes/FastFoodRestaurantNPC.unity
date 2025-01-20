@@ -62086,15 +62086,18 @@ MonoBehaviour:
   - action: Pick Up
     animationName: 
     actionChoice: 4
-  - action: Dance
-    animationName: Dance
-    actionChoice: 0
   - action: Drop
     animationName: 
     actionChoice: 5
   - action: Jump
     animationName: 
     actionChoice: 1
+  - action: Dance
+    animationName: Dance
+    actionChoice: 0
+  - action: Shoot
+    animationName: Shooting
+    actionChoice: 6
   actionResponseList: []
 --- !u!4 &1690000238 stripped
 Transform:
