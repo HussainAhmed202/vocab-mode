@@ -21045,7 +21045,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3458780173217957940, guid: 2a09da1d04f25174da5f37449608e885, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -4.248
+      value: -2.988
       objectReference: {fileID: 0}
     - target: {fileID: 3458780173217957940, guid: 2a09da1d04f25174da5f37449608e885, type: 3}
       propertyPath: m_LocalPosition.y
@@ -21053,7 +21053,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3458780173217957940, guid: 2a09da1d04f25174da5f37449608e885, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 6.661
+      value: 7.472
       objectReference: {fileID: 0}
     - target: {fileID: 3458780173217957940, guid: 2a09da1d04f25174da5f37449608e885, type: 3}
       propertyPath: m_LocalRotation.w
@@ -45672,6 +45672,11 @@ PrefabInstance:
       addedObject: {fileID: 1971811971}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2d48a5ba5e9c424489a39d7577e631b8, type: 3}
+--- !u!1 &1250069335 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4286956741597538916, guid: 2d48a5ba5e9c424489a39d7577e631b8, type: 3}
+  m_PrefabInstance: {fileID: 1250069334}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1250574929
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -69799,7 +69804,7 @@ Transform:
   m_GameObject: {fileID: 1921049044}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.045, y: 1.532, z: 6.47}
+  m_LocalPosition: {x: -3.045, y: 1.761, z: 6.47}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -71289,6 +71294,9 @@ MonoBehaviour:
   - Name: Burger
     Description: 
     gameObject: {fileID: 559516340}
+  - Name: Bathroom
+    Description: 
+    gameObject: {fileID: 1250069335}
   DynamicMoveTargetIndicator: {fileID: 8497747522689166650, guid: 4663d55e66aed9747901cb4e3c7699b7, type: 3}
 --- !u!4 &1951701264
 Transform:
