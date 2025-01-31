@@ -677,6 +677,16 @@
       },
       "url": "https://registry.npmjs.org"
     },
+    "io.extendreality.tilia.visuals.vignette.unity": {
+      "version": "1.0.7",
+      "depth": 0,
+      "source": "registry",
+      "dependencies": {
+        "io.extendreality.zinnia.unity": "2.16.2",
+        "io.extendreality.tilia.utilities.shaders.unity": "1.4.0"
+      },
+      "url": "https://registry.npmjs.org"
+    },
     "io.extendreality.zinnia.unity": {
       "version": "2.16.2",
       "depth": 1,
