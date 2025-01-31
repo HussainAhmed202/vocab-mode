@@ -15553,6 +15553,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cc2c18e189d423749bcb27809650683d, type: 3}
+--- !u!1 &444821116 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2052708542540457377, guid: 114b3c3ce4645364a97c8f0803bed65b, type: 3}
+  m_PrefabInstance: {fileID: 2125501398}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &448022099 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6166584487648029287, guid: cc2c18e189d423749bcb27809650683d, type: 3}
@@ -47974,9 +47979,17 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1741516278}
     - target: {fileID: 1829750917173539401, guid: 01193696c843f354990981f4ab90e660, type: 3}
+      propertyPath: rotationPivot
+      value: 
+      objectReference: {fileID: 444821116}
+    - target: {fileID: 1829750917173539401, guid: 01193696c843f354990981f4ab90e660, type: 3}
       propertyPath: horizontalAxis
       value: 
       objectReference: {fileID: 891912163}
+    - target: {fileID: 1829750917173539401, guid: 01193696c843f354990981f4ab90e660, type: 3}
+      propertyPath: sceneCameras.field
+      value: 
+      objectReference: {fileID: 555922425}
     - target: {fileID: 3771861057661900665, guid: 01193696c843f354990981f4ab90e660, type: 3}
       propertyPath: m_Name
       value: Locomotors.AxisMove.Vertical-Slide.Horizontal-SmoothRotate
