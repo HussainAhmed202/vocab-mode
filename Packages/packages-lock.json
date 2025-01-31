@@ -660,6 +660,17 @@
       },
       "url": "https://registry.npmjs.org"
     },
+    "io.extendreality.tilia.trackers.pseudobody.unity": {
+      "version": "2.3.12",
+      "depth": 0,
+      "source": "registry",
+      "dependencies": {
+        "io.extendreality.zinnia.unity": "2.16.2",
+        "io.extendreality.tilia.mutators.collisionignorer.unity": "2.0.22",
+        "io.extendreality.tilia.interactions.interactables.unity": "2.18.1"
+      },
+      "url": "https://registry.npmjs.org"
+    },
     "io.extendreality.tilia.utilities.shaders.unity": {
       "version": "1.4.0",
       "depth": 1,
