@@ -97,16 +97,6 @@
       },
       "url": "https://packages.unity.com"
     },
-    "com.readyplayerme.core": {
-      "version": "https://github.com/readyplayerme/rpm-unity-sdk-core.git#v7.4.0",
-      "depth": 0,
-      "source": "git",
-      "dependencies": {
-        "com.unity.cloud.gltfast": "6.0.1",
-        "com.unity.nuget.newtonsoft-json": "3.0.2"
-      },
-      "hash": "0f11fca654d1d1ee33ea31e567b4d6e083f7d19c"
-    },
     "com.soupday.cc3_unity_tools": {
       "version": "https://github.com/soupday/cc_unity_tools_URP.git",
       "depth": 0,
@@ -434,7 +424,7 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.xr.core-utils": {
-      "version": "2.3.0",
+      "version": "2.4.0",
       "depth": 1,
       "source": "registry",
       "dependencies": {
