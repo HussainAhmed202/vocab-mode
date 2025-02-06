@@ -8,6 +8,7 @@ TagManager:
   - Cupcake
   - Floor
   - SenderTMP
+  - Character
   layers:
   - Default
   - TransparentFX
@@ -17,10 +18,10 @@ TagManager:
   - UI
   - pseudobody
   - 
-  - 
-  - 
-  - 
-  - 
+  - Fries
+  - Tray
+  - Burger
+  - Soda
   - 
   - 
   - 

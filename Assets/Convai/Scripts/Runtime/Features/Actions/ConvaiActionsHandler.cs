@@ -19,8 +19,7 @@ namespace Convai.Scripts.Runtime.Features
         Crouch,
         MoveTo,
         PickUp,
-        Drop,
-        Shoot
+        Drop
     }
 
     /// <summary>
@@ -38,6 +37,7 @@ namespace Convai.Scripts.Runtime.Features
         private List<string> _actions = new();
         private ConvaiNPC _currentNPC;
         private ConvaiInteractablesData _interactablesData;
+        private Coroutine _playActionListCoroutine;
 
         // Awake is called when the script instance is being loaded
         private void Awake()
@@ -115,7 +115,19 @@ namespace Convai.Scripts.Runtime.Features
             #endregion
 
             // Start playing the action list using a coroutine
-            StartCoroutine(PlayActionList());
+            _playActionListCoroutine = StartCoroutine(PlayActionList());
+        }
+
+        private void OnEnable() {
+            if ( _playActionListCoroutine != null ) {
+                _playActionListCoroutine = StartCoroutine(PlayActionList());
+            }
+        }
+        
+        private void OnDisable() {
+            if ( _playActionListCoroutine != null ) {
+                StopCoroutine(_playActionListCoroutine);
+            }
         }
 
         private void Update()
@@ -323,11 +335,6 @@ namespace Convai.Scripts.Runtime.Features
                 case ActionChoice.Crouch:
                     // Call the Crouch function and yield until it's completed
                     yield return Crouch();
-                    break;
-
-                case ActionChoice.Shoot:
-                    // Call the Shoot function and yield until it's completed
-                    yield return Shoot(action.Target);
                     break;
 
                 case ActionChoice.None:
@@ -774,28 +781,6 @@ namespace Convai.Scripts.Runtime.Features
         }
 
         // STEP 3: Add the function for your action here.
-        // Coroutine to handle the throwing action
-        private IEnumerator Shoot(GameObject target)
-        {
-            // Trigger the "shoot" animation on the NPC's Animator
-            _currentNPC.GetComponent<Animator>().CrossFade(
-                Animator.StringToHash(name: "Shooting"), 
-                normalizedTransitionDuration: 0.05f
-            );
-
-            // Wait for the animation to complete (adjust the wait time to match the length of the "shoot" animation)
-            yield return new WaitForSeconds(1.5f);
-
-            // Optionally transition back to the "Idle" animation (remove this if not needed)
-            _currentNPC.GetComponent<Animator>().CrossFade(
-                Animator.StringToHash(name: "Idle"), 
-                normalizedTransitionDuration: 0.05f
-            );
-
-            // End the coroutine
-            yield return null;
-        }
-
 
         #endregion
     }
