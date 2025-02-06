@@ -1,7 +1,6 @@
 {
   "dependencies": {
     "com.meta.xr.sdk.all": "71.0.0",
-    "com.readyplayerme.core": "https://github.com/readyplayerme/rpm-unity-sdk-core.git#v7.4.0",
     "com.soupday.cc3_unity_tools": "https://github.com/soupday/cc_unity_tools_URP.git",
     "com.unity.2d.sprite": "1.0.0",
     "com.unity.ai.navigation": "2.0.5",
@@ -28,9 +27,9 @@
     "com.unity.timeline": "1.8.7",
     "com.unity.ugui": "2.0.0",
     "com.unity.visualscripting": "1.9.5",
-    "com.unity.xr.interaction.toolkit": "2.5.4",
+    "com.unity.xr.interaction.toolkit": "3.0.7",
     "com.unity.xr.management": "4.5.0",
-    "com.unity.xr.openxr": "1.10.0",
+    "com.unity.xr.openxr": "1.13.2",
     "io.extendreality.tilia.camerarigs.spatialsimulator.unity": "2.2.19",
     "io.extendreality.tilia.camerarigs.trackedalias.unity": "2.5.5",
     "io.extendreality.tilia.camerarigs.xrpluginframework.unity": "2.1.14",
