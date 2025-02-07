@@ -14,6 +14,9 @@ public class CurrentDateTime : MonoBehaviour
 
         // Formatting the text output
         largeText.text = $"Order Date : {currentDate}\nOrder Time : {currentTime}";
+
+
+        
         
     }
 }
