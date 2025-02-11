@@ -10,4 +10,13 @@ public class OpenScene : MonoBehaviour
     {
         SceneManager.LoadScene(1);
     }
+    public void GoToSchool()
+    {
+        SceneManager.LoadScene(2);
+    }
+    public void GoToHouse()
+    {
+        SceneManager.LoadScene(3);
+    }
 }
+

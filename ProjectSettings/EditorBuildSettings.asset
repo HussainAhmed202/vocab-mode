@@ -6,8 +6,20 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/MainMenu.unity
+    guid: 8e8ebb5c79a94b44a8d7013651197f11
+  - enabled: 0
     path: Assets/Convai/ConvaiXR/ConvaiVR/Scenes/Convai Demo - VR.unity
     guid: eda28d2f4fd11e84893a8d05344d7424
+  - enabled: 1
+    path: Assets/Scenes/FastFoodRestaurantGames.unity
+    guid: d2461300c2b296b4d9a7171555ed0c16
+  - enabled: 1
+    path: Assets/Scenes/School.unity
+    guid: 7288033559d934d468d2ee10929814f9
+  - enabled: 1
+    path: Assets/Scenes/House.unity
+    guid: 55f21ffcbb638a441b0e6eb173c50d19
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: 800f7226d1299434e9f4c95341185e58, type: 2}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 7a7970b4603a5a94e829affc5f0c9008, type: 2}
