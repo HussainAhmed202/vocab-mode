@@ -6,7 +6,7 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/MainMenu.unity
+    path: Assets/Scenes/SceneSelectionMenu.unity
     guid: 8e8ebb5c79a94b44a8d7013651197f11
   - enabled: 1
     path: Assets/Scenes/FastFoodRestaurantGames.unity
