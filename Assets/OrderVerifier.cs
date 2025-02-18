@@ -1,9 +1,15 @@
 using System;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
 
 public class OrderVerifier : MonoBehaviour
 {
+
+
+     [SerializeField] private TextMeshProUGUI largeText;
+
+
 
 
     // hardcoded order
@@ -55,10 +61,11 @@ public class OrderVerifier : MonoBehaviour
     public void VerifyOrder()
       
     {
-
+        TMP_Text tmpText = GameObject.Find("ResultDisplay").GetComponent<TMP_Text>();
         if (currentOrderNumber == "Empty") // no object snapped i.e tray is empty when button is pressed
             {
                 Debug.Log($"❌ Empty Tray. Order Empty");
+                tmpText.text = "You forgot to add all the items in the tray. Do not forget that";
                 return;               
             }
 
@@ -83,11 +90,13 @@ public class OrderVerifier : MonoBehaviour
             if (currentAmount != requiredAmount) // check if order contains the required item and if it contains the correct amount
             {
                 Debug.Log($"❌ Order Incorrect! {itemName} -> Required: {requiredAmount}, Current: {currentAmount}");
+                tmpText.text = "Incorrect but nice effort";
                 return;
             }
         }
 
         Debug.Log($"✅ {currentOrderNumber} Order is Complete! Ready to be Served! ✅");
+        tmpText.text = "Excellent Job";
 
         // flush the currentorder dict so new dictionary for new order
         currentOrder.Clear();
