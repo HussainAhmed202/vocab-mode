@@ -12,6 +12,7 @@ public class OrderVerifier : MonoBehaviour
 
 
 
+
     // hardcoded order
     private Dictionary<string, int> requiredOrder;
 
@@ -61,11 +62,37 @@ public class OrderVerifier : MonoBehaviour
     public void VerifyOrder()
       
     {
+
+        Material correctAnswer = Resources.Load<Material>("Materials/CorrectAnswer"); 
+        Material wrongAnswer = Resources.Load<Material>("Materials/WrongAnswer"); 
+
+
+
+       // Find the screen object by name (make sure the name matches exactly)
+        GameObject screenObject = GameObject.Find("screen");
+        if (screenObject == null)
+        {
+            Debug.LogError("❌ Screen object is null! Make sure it's assigned or instantiated correctly.");
+            return;
+        }
+
+        // Get the MeshRenderer component
+        MeshRenderer meshRenderer = screenObject.GetComponent<MeshRenderer>();
+        if (meshRenderer == null)
+        {
+            Debug.LogError("❌ No MeshRenderer found! Is this a UI Canvas instead?");
+            return;
+        }
+
+
         TMP_Text tmpText = GameObject.Find("ResultDisplay").GetComponent<TMP_Text>();
+
+        
         if (currentOrderNumber == "Empty") // no object snapped i.e tray is empty when button is pressed
             {
                 Debug.Log($"❌ Empty Tray. Order Empty");
                 tmpText.text = "You forgot to add all the items in the tray. Do not forget that";
+                meshRenderer.material = wrongAnswer;
                 return;               
             }
 
@@ -91,12 +118,14 @@ public class OrderVerifier : MonoBehaviour
             {
                 Debug.Log($"❌ Order Incorrect! {itemName} -> Required: {requiredAmount}, Current: {currentAmount}");
                 tmpText.text = "Incorrect but nice effort";
+                meshRenderer.material = wrongAnswer;
                 return;
             }
         }
 
         Debug.Log($"✅ {currentOrderNumber} Order is Complete! Ready to be Served! ✅");
         tmpText.text = "Excellent Job";
+        meshRenderer.material = correctAnswer;
 
         // flush the currentorder dict so new dictionary for new order
         currentOrder.Clear();
