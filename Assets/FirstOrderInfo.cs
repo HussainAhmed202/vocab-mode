@@ -1,32 +1,18 @@
 using UnityEngine;
-using System;
-using TMPro;
 
-public class FirstOrderInfo : MonoBehaviour
+public class FirstOrderInfo : OrderInfoBase
 {
-    [SerializeField] private TextMeshProUGUI largeText;
-
     void Start()
     {
-        string currentDate = System.DateTime.UtcNow.ToLocalTime().ToString("dd.MM.yyyy");
-        string currentTime = System.DateTime.UtcNow.ToLocalTime().ToString("hh:mm tt");
-        TMP_Text tmpText = GameObject.Find("FirstOrderTextMessageDisplay").GetComponent<TMP_Text>();
+        // Define order details
+        string orderNumber = "#1023";
+        string tableNumber = "#2";
+        string[] itemNames = { "Hamburger", "Pommes Frites", "Cola (Groß)" };
+        int[] quantities = { 1, 2, 1 };
+        float[] basePrices = { 3.99f, 2.99f, 2.49f }; // Base prices for each item
+        float taxRate = 0.08f;
 
-        // Formatting the receipt output
-        tmpText.text = "=============================================\n" +
-                         "                 BurgerBlitz\n" +
-                         "=============================================\n" +
-                         "Bestell-Nr.: #1023     Tisch: #2\n" +
-                         $"Datum: {currentDate}   Uhrzeit: {currentTime}\n\n" +
-                         "Artikel                    Menge   Preis  \n" +
-                         "-----------------------------------------------------------------------\n" +
-                         "1. Hamburger             3     11,97 €  \n" +
-                         "2. Pommes Frites       2      5,98 €  \n" +
-                         "3. Cola (Groß)            1      2,49 €  \n" +
-                         "-----------------------------------------------------------------------\n" +
-                         "Zwischensumme:            20,44 €  \n" +
-                         "Steuer (8%):                   1,64 €  \n" +
-                         "-----------------------------------------------------------------------\n" +
-                         "Gesamt:                        22,08 €  ";
+        // Set the receipt text
+        SetReceiptText(orderNumber, tableNumber, itemNames, quantities, basePrices, taxRate);
     }
 }
