@@ -9,6 +9,9 @@ public class OrderVerifier : MonoBehaviour
 
      [SerializeField] private TextMeshProUGUI largeText;
 
+     
+     public ScreenBlinker screenBlinker; // Reference to the ScreenBlinker script
+
 
 
 
@@ -93,6 +96,8 @@ public class OrderVerifier : MonoBehaviour
                 Debug.Log($"❌ Empty Tray. Order Empty");
                 tmpText.text = "You forgot to add all the items in the tray. Do not forget that";
                 meshRenderer.material = wrongAnswer;
+                // Blink red for invalid order
+            screenBlinker.Blink(Color.red);
                 return;               
             }
 
@@ -119,6 +124,8 @@ public class OrderVerifier : MonoBehaviour
                 Debug.Log($"❌ Order Incorrect! {itemName} -> Required: {requiredAmount}, Current: {currentAmount}");
                 tmpText.text = "Incorrect but nice effort";
                 meshRenderer.material = wrongAnswer;
+                // Blink red for invalid order
+            screenBlinker.Blink(Color.red);
                 return;
             }
         }
@@ -126,6 +133,9 @@ public class OrderVerifier : MonoBehaviour
         Debug.Log($"✅ {currentOrderNumber} Order is Complete! Ready to be Served! ✅");
         tmpText.text = "Excellent Job";
         meshRenderer.material = correctAnswer;
+
+        // Blink green for valid order
+            screenBlinker.Blink(Color.green);
 
         // flush the currentorder dict so new dictionary for new order
         currentOrder.Clear();
