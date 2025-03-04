@@ -163,7 +163,7 @@ PlayerSettings:
   androidMaxAspectRatio: 2.4
   androidMinAspectRatio: 1
   applicationIdentifier:
-    Android: com.Convai.ConvaiVR
+    Android: com.DefaultCompany.vocabularymode
     Standalone: com.Convai.VR
   buildNumber:
     Standalone: 0

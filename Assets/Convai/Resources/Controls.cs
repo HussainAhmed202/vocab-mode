@@ -40,7 +40,7 @@ public partial class @Controls: IInputActionCollection2, IDisposable
                     ""name"": ""Talk"",
                     ""type"": ""Button"",
                     ""id"": ""7efd48a1-36f9-41dc-ba05-64f4e37985a2"",
-                    ""expectedControlType"": ""Button"",
+                    ""expectedControlType"": """",
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
@@ -103,7 +103,7 @@ public partial class @Controls: IInputActionCollection2, IDisposable
                     ""name"": ""ToggleSettings"",
                     ""type"": ""Button"",
                     ""id"": ""2feff8e6-737d-4f11-892e-60a1eedbe5b8"",
-                    ""expectedControlType"": ""Button"",
+                    ""expectedControlType"": """",
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
@@ -112,7 +112,7 @@ public partial class @Controls: IInputActionCollection2, IDisposable
                     ""name"": ""CursorUnlock"",
                     ""type"": ""Button"",
                     ""id"": ""b140b6bf-eff7-4213-a43d-47c7c4f9f492"",
-                    ""expectedControlType"": ""Button"",
+                    ""expectedControlType"": """",
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
@@ -126,6 +126,17 @@ public partial class @Controls: IInputActionCollection2, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""Keyboard & Mouse"",
+                    ""action"": ""Talk"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""8d2d8ec5-3c61-4293-8140-6f1d6558861e"",
+                    ""path"": ""<XRController>{RightHand}/primaryButton"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": "";OculusMapping"",
                     ""action"": ""Talk"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
@@ -236,6 +247,17 @@ public partial class @Controls: IInputActionCollection2, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": ""Keyboard & Mouse"",
+                    ""action"": ""ToggleSettings"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""a8360c48-8241-40bd-a713-402d3e95868e"",
+                    ""path"": ""<XRController>{LeftHand}/primaryButton"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": "";OculusMapping"",
                     ""action"": ""ToggleSettings"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
@@ -376,6 +398,17 @@ public partial class @Controls: IInputActionCollection2, IDisposable
             ""devices"": [
                 {
                     ""devicePath"": ""<Touchscreen>"",
+                    ""isOptional"": false,
+                    ""isOR"": false
+                }
+            ]
+        },
+        {
+            ""name"": ""OculusMapping"",
+            ""bindingGroup"": ""OculusMapping"",
+            ""devices"": [
+                {
+                    ""devicePath"": ""<OculusTouchController>"",
                     ""isOptional"": false,
                     ""isOR"": false
                 }
@@ -600,6 +633,15 @@ public partial class @Controls: IInputActionCollection2, IDisposable
         {
             if (m_MobileSchemeIndex == -1) m_MobileSchemeIndex = asset.FindControlSchemeIndex("Mobile");
             return asset.controlSchemes[m_MobileSchemeIndex];
+        }
+    }
+    private int m_OculusMappingSchemeIndex = -1;
+    public InputControlScheme OculusMappingScheme
+    {
+        get
+        {
+            if (m_OculusMappingSchemeIndex == -1) m_OculusMappingSchemeIndex = asset.FindControlSchemeIndex("OculusMapping");
+            return asset.controlSchemes[m_OculusMappingSchemeIndex];
         }
     }
     public interface IPlayerActions
