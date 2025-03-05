@@ -49,7 +49,7 @@ public partial class @Controls: IInputActionCollection2, IDisposable
                     ""name"": ""Jump"",
                     ""type"": ""Button"",
                     ""id"": ""b5c6fdbe-4e72-4cb2-9ddf-0afea5878846"",
-                    ""expectedControlType"": ""Button"",
+                    ""expectedControlType"": """",
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
@@ -94,7 +94,7 @@ public partial class @Controls: IInputActionCollection2, IDisposable
                     ""name"": ""ToggleChat"",
                     ""type"": ""Button"",
                     ""id"": ""35745f7d-43f1-4748-863e-5b3717499377"",
-                    ""expectedControlType"": ""Button"",
+                    ""expectedControlType"": """",
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false

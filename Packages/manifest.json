@@ -38,6 +38,7 @@
     "io.extendreality.tilia.input.unityinputsystem": "2.4.11",
     "io.extendreality.tilia.interactions.controllables.unity": "2.10.31",
     "io.extendreality.tilia.interactions.interactables.unity": "2.18.1",
+    "io.extendreality.tilia.interactions.pointerinteractors.unity": "2.3.26",
     "io.extendreality.tilia.interactions.snapzone.unity": "2.4.8",
     "io.extendreality.tilia.locomotors.axismove.unity": "2.1.12",
     "io.extendreality.tilia.locomotors.teleporter.unity": "2.2.4",
