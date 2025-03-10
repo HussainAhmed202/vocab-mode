@@ -10,7 +10,8 @@ public class OrderVerifier : MonoBehaviour
      [SerializeField] private TextMeshProUGUI largeText;
 
      
-     public ScreenBlinker screenBlinker; // Reference to the ScreenBlinker script
+     public ScreenBlinker screenBlinker; 
+     public LifeSystem lifeSystem;
 
 
 
@@ -100,6 +101,7 @@ public class OrderVerifier : MonoBehaviour
                 
                 // Blink red for invalid order
                 screenBlinker.Blink(Color.red);
+                lifeSystem.DecrementLife();
                 return;               
             }
 
@@ -130,6 +132,7 @@ public class OrderVerifier : MonoBehaviour
                 
                 // Blink red for invalid order
                 screenBlinker.Blink(Color.red);
+                lifeSystem.DecrementLife();
                 return;
             }
         }
