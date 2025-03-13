@@ -13,6 +13,8 @@ public class OrderVerifier : MonoBehaviour
      public ScreenBlinker screenBlinker; 
      public LifeSystem lifeSystem;
 
+     public PlayResultSounds resultAudioSource;
+
 
 
 
@@ -21,6 +23,7 @@ public class OrderVerifier : MonoBehaviour
     private Dictionary<string, int> requiredOrder;
 
 
+    // list of orders
     private Dictionary<string, int> requiredOrder1 = new Dictionary<string, int>
     {
         { "Burger", 1 },
@@ -102,6 +105,7 @@ public class OrderVerifier : MonoBehaviour
                 // Blink red for invalid order
                 screenBlinker.Blink(Color.red);
                 lifeSystem.DecrementLife();
+                resultAudioSource.PlayDefeatSound();
                 return;               
             }
 
@@ -133,12 +137,14 @@ public class OrderVerifier : MonoBehaviour
                 // Blink red for invalid order
                 screenBlinker.Blink(Color.red);
                 lifeSystem.DecrementLife();
+                resultAudioSource.PlayDefeatSound();
                 return;
             }
         }
 
         Debug.Log($"✅ {currentOrderNumber} Order is Complete! Ready to be Served! ✅");
         tmpText.text = "Excellent Job";
+        resultAudioSource.PlayVictorySound();
         
         // meshRenderer.material = correctAnswer;
 
