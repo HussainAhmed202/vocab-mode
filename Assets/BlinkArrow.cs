@@ -3,7 +3,7 @@ using UnityEngine;
 public class BlinkArrow : MonoBehaviour
 {
 
-    public float blinkInterval = 0.5f; // Time interval for blinking
+    private float blinkInterval = 0.5f; // Time interval for blinking
 
     public SpriteRenderer spriteRenderer; // Reference to the SpriteRenderer component
 
