@@ -70,7 +70,8 @@ namespace PW
 
         ProgressHelper m_progressHelper;
 
-        Collider m_Collider;
+        // donot need the colliders as this object is just mesh renderer. No interaction with the dummy object created
+        //Collider m_Collider;
 
         Animator m_animator;
         #endregion
@@ -88,10 +89,10 @@ namespace PW
                 m_progressHelper.ToggleHelper(false);
             }
 
-            //get the collider and enable it 
-            m_Collider = GetComponent<Collider>();
+            // //get the collider and enable it 
+            // m_Collider = GetComponent<Collider>();
 
-            m_Collider.enabled = true;
+            // m_Collider.enabled = true;
 
             //Get the animator from the dummy Target
             if (dummyAnimationTarget != null)
@@ -108,6 +109,15 @@ namespace PW
         }
 
         void OnMouseUp()
+        {
+            if (canFillCup)
+            {
+                StartFillingStep();
+            }
+        }
+
+        // for the VR input from snapzone called when the cup is snapped
+         public void OnSnapping()
         {
             if (canFillCup)
             {
@@ -231,11 +241,11 @@ namespace PW
             if(m_progressHelper!=null)
                 m_progressHelper.ToggleHelper(false);
 
-            //disable collider, because we don't want interaction on the object
-            m_Collider.enabled = false;
+            // //disable collider, because we don't want interaction on the object
+            // m_Collider.enabled = false;
 
-            //tell the cup to enable its collider and set necessary things 
-            fillCupHelper.FillEnded();
+            // //tell the cup to enable its collider and set necessary things 
+            // fillCupHelper.FillEnded();
 
             if (fillParticle != null)
             {
@@ -266,7 +276,7 @@ namespace PW
 
             fillCupHelper = null;
 
-            m_Collider.enabled = true;
+            // m_Collider.enabled = true;
         }
 
         /// <summary>
