@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: LemonadeLiquid
+  m_Name: CoffeeLiquid
   m_Shader: {fileID: 4800000, guid: fe64efaaefeb7d84197364314f3514b9, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
@@ -78,7 +78,7 @@ Material:
     - _UVSec: 0
     - _ZWrite: 1
     m_Colors:
-    - _Color: {r: 0.9411765, g: 1, b: 0, a: 0.4}
+    - _Color: {r: 0.43529412, g: 0.30588236, b: 0.21568628, a: 0.4}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _GravityDirection: {r: 0, g: -1, b: 0, a: 0}
     - _SurfaceLevel: {r: 0, g: 1.15, b: 0, a: 0}
