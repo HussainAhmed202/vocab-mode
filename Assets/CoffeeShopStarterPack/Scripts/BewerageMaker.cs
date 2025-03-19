@@ -19,6 +19,10 @@ namespace PW
     [RequireComponent(typeof(Collider))]
     public class BewerageMaker : MonoBehaviour
     {
+
+        
+
+
         #region AnimationSettings
         [SerializeField]
         public bool useAnimation = true;
@@ -56,10 +60,14 @@ namespace PW
 
         //UI indicator to show progress
         public GameObject progressHelperprefab;
-
+        
+        //  // Reference the interactable cup once the filling is accomplished
+        // public GameObject objectToEnable;   
+       
+        
         //the position where the cup will be placed on instantiate
         public Transform fillCupSpot;
-
+           
 
         #region private variables
         private float totalProcess;
@@ -104,8 +112,7 @@ namespace PW
             {
                 if(m_animator!=null)
                     m_animator.enabled = false;
-            }
-                
+            }   
         }
 
         void OnMouseUp()
@@ -250,6 +257,35 @@ namespace PW
             if (fillParticle != null)
             {
                 fillParticle.Stop();
+            }
+
+            // // Enable the object at the fillCupSpot position
+            // if (objectToEnable != null)
+            // {
+            //     // Enable the object at the cupspot position
+            //     objectToEnable.SetActive(true);
+            // }
+
+            // // Find the object by name and enable it
+            // GameObject objectToEnable = GameObject.Find("FilledCup");
+            // if (objectToEnable != null)
+            // {
+            //     Debug.Log("Interactable found");
+            //     objectToEnable.SetActive(true);
+            // }
+            // else{
+            //     Debug.Log("No Interactable found");
+            // }
+
+            // Assuming the objectToEnable is a direct child of the coffee machine
+            Transform childTransform = transform.Find("FilledCup"); 
+            if (childTransform != null)
+            {
+                Debug.Log("Interactable found");
+                childTransform.gameObject.SetActive(true);
+            }
+            else{
+                Debug.Log("No Interactable found");
             }
 
             StartCoroutine(DoFillEnded());
