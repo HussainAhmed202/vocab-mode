@@ -1,4 +1,4 @@
-﻿// ******------------------------------------------------------******
+// ******------------------------------------------------------******
 // FillCupHelper.cs
 //
 // Author:
@@ -15,7 +15,7 @@ namespace PW
     public class FillCupHelper : MonoBehaviour
     {
 
-        Collider m_Collider;
+        //Collider m_Collider;
 
         BewerageMaker m_Machine;
 
@@ -26,8 +26,8 @@ namespace PW
 
         void Awake()
         {
-            m_Collider = GetComponent<Collider>();
-            m_Collider.enabled = false;
+            // m_Collider = GetComponent<Collider>();
+            // m_Collider.enabled = false;
             if (fluid != null)
                 fluid.gameObject.SetActive(false);
         }
@@ -74,10 +74,10 @@ namespace PW
                 fluid.transform.localScale = Vector3.one;
         }
 
-        public void FillEnded()
-        {
-            m_Collider.enabled = true;
-        }
+        // public void FillEnded()
+        // {
+        //     m_Collider.enabled = true;
+        // }
 
         void OnMouseDown()
         {

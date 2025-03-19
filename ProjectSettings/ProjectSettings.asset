@@ -141,7 +141,11 @@ PlayerSettings:
   visionOSBundleVersion: 1.0
   tvOSBundleVersion: 1.0
   bundleVersion: 3.2.0
-  preloadedAssets: []
+  preloadedAssets:
+  - {fileID: 11400000, guid: 7814d7fd6f9c6d845a32f4f66a819ac2, type: 2}
+  - {fileID: 11400000, guid: 800f7226d1299434e9f4c95341185e58, type: 2}
+  - {fileID: 2500780512088218768, guid: 9cfb797f7b487ed48bc018b3aa66b3cd, type: 2}
+  - {fileID: 3312403419814116666, guid: 7a7970b4603a5a94e829affc5f0c9008, type: 2}
   metroInputSource: 0
   wsaTransparentSwapchain: 0
   m_HolographicPauseOnTrackingLoss: 1
@@ -163,7 +167,7 @@ PlayerSettings:
   androidMaxAspectRatio: 2.4
   androidMinAspectRatio: 1
   applicationIdentifier:
-    Android: com.Convai.ConvaiVR
+    Android: com.DefaultCompany.vocabularymode
     Standalone: com.Convai.VR
   buildNumber:
     Standalone: 0

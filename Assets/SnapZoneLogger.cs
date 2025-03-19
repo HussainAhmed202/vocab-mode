@@ -20,8 +20,11 @@ public class SnapZoneLogger : MonoBehaviour
             string objectName = snappedObject.name;
             // string zoneName = string.IsNullOrEmpty(snapZoneName) ? gameObject.name : snapZoneName; 
 
+            // get the tray name which tells us the order number
+            string trayNumber = transform.parent.name; // Order1Tray, Order2Tray etc
+
             // Debug.Log($"{zoneName} Snapped, Object Snapped = {objectName}, Layer = {layerName}");
-            Debug.Log($"{gameObject.name} Snapped, Object Snapped = {objectName}, Layer = {layerName}");
+            Debug.Log($"Serving Tray: {trayNumber}, {gameObject.name} Snapped, Object Snapped = {objectName}, Layer = {layerName}");
 
 
             // Disable grab for the snapped object
@@ -31,7 +34,7 @@ public class SnapZoneLogger : MonoBehaviour
             // Notify OrderVerifier about the snapped object
             if (orderVerifier != null)
             {
-                orderVerifier.OnItemSnapped(snappedObject);
+                orderVerifier.OnItemSnapped(snappedObject, trayNumber);
             }
             else
             {

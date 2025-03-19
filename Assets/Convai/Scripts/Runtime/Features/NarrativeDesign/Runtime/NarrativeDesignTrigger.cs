@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using Convai.Scripts.Runtime.Core;
+using NUnit.Framework.Constraints;
 using UnityEngine;
 using UnityEngine.Events;
 
@@ -22,6 +23,14 @@ namespace Convai.Scripts.Runtime.Features
 
         private void OnTriggerEnter(Collider other)
         {
+            Debug.Log("Entered the OnTriggerEnter method of NarrativeDesignTrigger");
+            if (other == null) Debug.Log("No object detected");
+            else {
+                Debug.Log("Collided with: " + other.name);
+                Debug.Log("Tag of collided object: " + other.tag);
+            };
+
+
             if (other.gameObject.CompareTag("Player")) InvokeSelectedTrigger();
         }
 

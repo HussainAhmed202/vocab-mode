@@ -470,6 +470,15 @@
       },
       "url": "https://packages.unity.com"
     },
+    "com.unity.xr.oculus": {
+      "version": "4.4.0",
+      "depth": 0,
+      "source": "registry",
+      "dependencies": {
+        "com.unity.xr.management": "4.4.0"
+      },
+      "url": "https://packages.unity.com"
+    },
     "com.unity.xr.openxr": {
       "version": "1.13.2",
       "depth": 0,
@@ -580,6 +589,18 @@
       },
       "url": "https://registry.npmjs.org"
     },
+    "io.extendreality.tilia.interactions.pointerinteractors.unity": {
+      "version": "2.3.26",
+      "depth": 0,
+      "source": "registry",
+      "dependencies": {
+        "io.extendreality.zinnia.unity": "2.16.2",
+        "io.extendreality.tilia.utilities.shaders.unity": "1.4.0",
+        "io.extendreality.tilia.indicators.objectpointers.unity": "2.2.16",
+        "io.extendreality.tilia.interactions.interactables.unity": "2.18.1"
+      },
+      "url": "https://registry.npmjs.org"
+    },
     "io.extendreality.tilia.interactions.snapzone.unity": {
       "version": "2.4.8",
       "depth": 0,
@@ -638,6 +659,17 @@
       "source": "registry",
       "dependencies": {
         "io.extendreality.zinnia.unity": "2.16.2"
+      },
+      "url": "https://registry.npmjs.org"
+    },
+    "io.extendreality.tilia.output.interactorhaptics.unity": {
+      "version": "2.1.81",
+      "depth": 0,
+      "source": "registry",
+      "dependencies": {
+        "io.extendreality.zinnia.unity": "2.16.2",
+        "io.extendreality.tilia.camerarigs.trackedalias.unity": "2.5.5",
+        "io.extendreality.tilia.interactions.interactables.unity": "2.18.1"
       },
       "url": "https://registry.npmjs.org"
     },
