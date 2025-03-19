@@ -19,6 +19,10 @@ namespace PW
     [RequireComponent(typeof(Collider))]
     public class BewerageMaker : MonoBehaviour
     {
+
+        
+
+
         #region AnimationSettings
         [SerializeField]
         public bool useAnimation = true;
@@ -56,10 +60,14 @@ namespace PW
 
         //UI indicator to show progress
         public GameObject progressHelperprefab;
-
+        
+        //  // Reference the interactable cup once the filling is accomplished
+        // public GameObject objectToEnable;   
+       
+        
         //the position where the cup will be placed on instantiate
         public Transform fillCupSpot;
-
+           
 
         #region private variables
         private float totalProcess;
@@ -70,7 +78,8 @@ namespace PW
 
         ProgressHelper m_progressHelper;
 
-        Collider m_Collider;
+        // donot need the colliders as this object is just mesh renderer. No interaction with the dummy object created
+        //Collider m_Collider;
 
         Animator m_animator;
         #endregion
@@ -88,10 +97,10 @@ namespace PW
                 m_progressHelper.ToggleHelper(false);
             }
 
-            //get the collider and enable it 
-            m_Collider = GetComponent<Collider>();
+            // //get the collider and enable it 
+            // m_Collider = GetComponent<Collider>();
 
-            m_Collider.enabled = true;
+            // m_Collider.enabled = true;
 
             //Get the animator from the dummy Target
             if (dummyAnimationTarget != null)
@@ -103,11 +112,19 @@ namespace PW
             {
                 if(m_animator!=null)
                     m_animator.enabled = false;
-            }
-                
+            }   
         }
 
         void OnMouseUp()
+        {
+            if (canFillCup)
+            {
+                StartFillingStep();
+            }
+        }
+
+        // for the VR input from snapzone called when the cup is snapped
+         public void OnSnapping()
         {
             if (canFillCup)
             {
@@ -231,15 +248,44 @@ namespace PW
             if(m_progressHelper!=null)
                 m_progressHelper.ToggleHelper(false);
 
-            //disable collider, because we don't want interaction on the object
-            m_Collider.enabled = false;
+            // //disable collider, because we don't want interaction on the object
+            // m_Collider.enabled = false;
 
-            //tell the cup to enable its collider and set necessary things 
-            fillCupHelper.FillEnded();
+            // //tell the cup to enable its collider and set necessary things 
+            // fillCupHelper.FillEnded();
 
             if (fillParticle != null)
             {
                 fillParticle.Stop();
+            }
+
+            // // Enable the object at the fillCupSpot position
+            // if (objectToEnable != null)
+            // {
+            //     // Enable the object at the cupspot position
+            //     objectToEnable.SetActive(true);
+            // }
+
+            // // Find the object by name and enable it
+            // GameObject objectToEnable = GameObject.Find("FilledCup");
+            // if (objectToEnable != null)
+            // {
+            //     Debug.Log("Interactable found");
+            //     objectToEnable.SetActive(true);
+            // }
+            // else{
+            //     Debug.Log("No Interactable found");
+            // }
+
+            // Assuming the objectToEnable is a direct child of the coffee machine
+            Transform childTransform = transform.Find("FilledCup"); 
+            if (childTransform != null)
+            {
+                Debug.Log("Interactable found");
+                childTransform.gameObject.SetActive(true);
+            }
+            else{
+                Debug.Log("No Interactable found");
             }
 
             StartCoroutine(DoFillEnded());
@@ -266,7 +312,7 @@ namespace PW
 
             fillCupHelper = null;
 
-            m_Collider.enabled = true;
+            // m_Collider.enabled = true;
         }
 
         /// <summary>
