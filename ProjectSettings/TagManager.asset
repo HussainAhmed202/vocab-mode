@@ -9,6 +9,7 @@ TagManager:
   - Floor
   - SenderTMP
   - Character
+  - CoffeeCup
   layers:
   - Default
   - TransparentFX
