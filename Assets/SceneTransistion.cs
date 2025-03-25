@@ -5,31 +5,17 @@ using UnityEngine.UI;
 
 public class SceneTransition : MonoBehaviour
 {
-    public string sceneToLoad; 
-    public float transitionTime = 1f; // Time for fade effect
-    public CanvasGroup fadeCanvas; // Assign a UI CanvasGroup for fade effect
+    public float delay = 5f; // Set the delay time in seconds
 
-    public void LoadNextScene()
+    void Start()
     {
-        StartCoroutine(Transition());
+        StartCoroutine(LoadNextSceneAfterDelay());
     }
 
-    private IEnumerator Transition()
+    IEnumerator LoadNextSceneAfterDelay()
     {
-        if (fadeCanvas != null)
-        {
-            // Start fading out
-            float elapsedTime = 0f;
-            while (elapsedTime < transitionTime)
-            {
-                fadeCanvas.alpha = Mathf.Lerp(0, 1, elapsedTime / transitionTime);
-                elapsedTime += Time.deltaTime;
-                yield return null;
-            }
-            fadeCanvas.alpha = 1;
-        }
-
-        // Load the new scene
-        SceneManager.LoadScene(sceneToLoad);
+        yield return new WaitForSeconds(delay); // Wait for the specified delay
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1); // Load the next scene
     }
+
 }
