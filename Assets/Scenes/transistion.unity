@@ -758,7 +758,7 @@ MonoBehaviour:
     _hasBackface: 0
     _crease: 89
     _resolution: 0.01
-    _fontName: KaushanScript-Regular.ttf
+    _fontName: RacingSansOne-Regular.ttf
     _text: ViRAL
     _modified: 0
     _rebuild: 0
@@ -767,8 +767,8 @@ MonoBehaviour:
     - {fileID: 2100000, guid: f7020305d39e99e4da1380fec73f0463, type: 2}
     - {fileID: 2100000, guid: 47991275fa5ffb9448fbcd626a58ee31, type: 2}
     - {fileID: 2100000, guid: 6d09a1abd196f934d8cfcedc3ace9ad0, type: 2}
-    _shadowCastMode: 1
-    _receiveShadows: 1
+    _shadowCastMode: 0
+    _receiveShadows: 0
     _lightProbeUsage: 0
     _applyLayerSettings: 1
     _modified: 0
@@ -1115,6 +1115,10 @@ PrefabInstance:
     - target: {fileID: 6020726910918489075, guid: 71cacef91e7957d488f19d862c52040f, type: 3}
       propertyPath: m_Name
       value: Interactions.SpatialButton.ClickButton
+      objectReference: {fileID: 0}
+    - target: {fileID: 6020726910918489075, guid: 71cacef91e7957d488f19d862c52040f, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6020726910918489077, guid: 71cacef91e7957d488f19d862c52040f, type: 3}
       propertyPath: m_LocalScale.x
@@ -1685,7 +1689,7 @@ Transform:
   m_GameObject: {fileID: 1887113661}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.367, z: -3.63}
+  m_LocalPosition: {x: 0, y: 1.64, z: -2.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
