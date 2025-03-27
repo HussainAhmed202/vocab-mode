@@ -1,21 +1,26 @@
-using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using UnityEngine.UI;
 
-public class SceneTransition : MonoBehaviour
+public class NextSceneTransition : MonoBehaviour
 {
-    public float delay = 5f; // Set the delay time in seconds
+    [SerializeField] private string nextSceneName; 
 
-    void Start()
+    public void LoadNextScene()
     {
-        StartCoroutine(LoadNextSceneAfterDelay());
+        if (!string.IsNullOrEmpty(nextSceneName))
+        {
+            if (Application.CanStreamedLevelBeLoaded(nextSceneName))
+            {
+                SceneManager.LoadScene(nextSceneName);
+            }
+            else
+            {
+                Debug.LogError($"Scene '{nextSceneName}' cannot be loaded. Check the name and ensure it's added to build settings.");
+            }
+        }
+        else
+        {
+            Debug.LogError("No scene name provided. Please set the next scene name in the inspector.");
+        }
     }
-
-    IEnumerator LoadNextSceneAfterDelay()
-    {
-        yield return new WaitForSeconds(delay); // Wait for the specified delay
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1); // Load the next scene
-    }
-
 }
