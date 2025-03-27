@@ -9,7 +9,7 @@ public class LocationSelectionManager : MonoBehaviour
 
     void Start()
     {
-        // Populate the dictionary with scene mappings
+        // add your scenes
         sceneDictionary.Add(0, "Restaurant");
         sceneDictionary.Add(1, "House");
         sceneDictionary.Add(2, "School");
@@ -17,7 +17,7 @@ public class LocationSelectionManager : MonoBehaviour
         sceneDictionary.Add(4, "Train");
     }
 
-    void Update()
+     void Update()
     {
         if (buttonGroupManager != null)
         {
