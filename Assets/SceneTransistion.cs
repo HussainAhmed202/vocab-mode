@@ -1,35 +1,26 @@
-using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using UnityEngine.UI;
 
-public class SceneTransition : MonoBehaviour
+public class NextSceneTransition : MonoBehaviour
 {
-    public string sceneToLoad; 
-    public float transitionTime = 1f; // Time for fade effect
-    public CanvasGroup fadeCanvas; // Assign a UI CanvasGroup for fade effect
+    [SerializeField] private string nextSceneName; 
 
     public void LoadNextScene()
     {
-        StartCoroutine(Transition());
-    }
-
-    private IEnumerator Transition()
-    {
-        if (fadeCanvas != null)
+        if (!string.IsNullOrEmpty(nextSceneName))
         {
-            // Start fading out
-            float elapsedTime = 0f;
-            while (elapsedTime < transitionTime)
+            if (Application.CanStreamedLevelBeLoaded(nextSceneName))
             {
-                fadeCanvas.alpha = Mathf.Lerp(0, 1, elapsedTime / transitionTime);
-                elapsedTime += Time.deltaTime;
-                yield return null;
+                SceneManager.LoadScene(nextSceneName);
             }
-            fadeCanvas.alpha = 1;
+            else
+            {
+                Debug.LogError($"Scene '{nextSceneName}' cannot be loaded. Check the name and ensure it's added to build settings.");
+            }
         }
-
-        // Load the new scene
-        SceneManager.LoadScene(sceneToLoad);
+        else
+        {
+            Debug.LogError("No scene name provided. Please set the next scene name in the inspector.");
+        }
     }
 }
