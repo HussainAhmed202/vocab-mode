@@ -10,11 +10,11 @@ public class SceneSelectionManager : MonoBehaviour
 
     private Dictionary<int, string> sceneDictionary = new Dictionary<int, string>
     {
-        { 1, "Restaurant" },
-        { 2, "House" },
-        { 3, "School" },
-        { 4, "Library" },
-        { 5, "Train" }
+        { 0, "FastFoodRestaurant" },
+        { 1, "House" },
+        { 2, "School" },
+        { 3, "Library" },
+        { 4, "Train" }
     };
 
     private readonly Dictionary<int, string> lessonDictionary = new Dictionary<int, string>
@@ -27,29 +27,30 @@ public class SceneSelectionManager : MonoBehaviour
 
     public void HandleSceneSelection()
     {
-        if (locationButtonManager != null && lessonButtonManager != null)
+        Debug.Log("This is running");
+        if (locationButtonManager != null || lessonButtonManager != null)
         {
             int locationIndex = locationButtonManager.ActiveButtonIndex;
             int lessonIndex = lessonButtonManager.ActiveButtonIndex;
 
-            if (sceneDictionary.ContainsKey(locationIndex) && lessonDictionary.ContainsKey(lessonIndex))
+            if (locationIndex != -1 && lessonIndex != -1)
             {
                 string sceneName = sceneDictionary[locationIndex]  + lessonDictionary[lessonIndex];
                 Debug.Log($"Loading Scene: {sceneName}");
-                SceneManager.LoadScene(sceneName);
+                SceneManager.LoadScene(sceneName);   
             }
-            else if (locationButtonManager == null)
+            else if (locationIndex != -1)
             {
-                Debug.Log("Location not found");
+                Debug.Log("Location not selected");
             }
-            else if (lessonButtonManager == null)
+            else if (lessonIndex  != -1)
             {
-                Debug.Log("Lesson not found ");
+                Debug.Log("Lesson not selected");
             }
         }
         else
         {
-            Debug.LogError("ButtonGroupManagers are not assigned.");
+            Debug.Log("ButtonManager not assigned.");
         }
     }
 }
