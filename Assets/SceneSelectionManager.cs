@@ -2,11 +2,14 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using System.Collections.Generic;
 using Tilia.Interactions.SpatialButtons;
+using System.Collections;
 
 public class SceneSelectionManager : MonoBehaviour
 {
     [SerializeField] private SpatialButtonGroupManager locationButtonManager;
     [SerializeField] private SpatialButtonGroupManager lessonButtonManager;
+    private string sceneToLoad;
+
 
     private Dictionary<int, string> sceneDictionary = new Dictionary<int, string>
     {
@@ -27,30 +30,49 @@ public class SceneSelectionManager : MonoBehaviour
 
     public void HandleSceneSelection()
     {
-        Debug.Log("This is running");
-        if (locationButtonManager != null || lessonButtonManager != null)
-        {
-            int locationIndex = locationButtonManager.ActiveButtonIndex;
-            int lessonIndex = lessonButtonManager.ActiveButtonIndex;
+       int locationIndex = locationButtonManager.ActiveButtonIndex;
+       int lessonIndex = lessonButtonManager.ActiveButtonIndex;
+       if (locationIndex != -1 && lessonIndex != -1)
+       {
+            sceneToLoad = sceneDictionary[locationIndex]  + lessonDictionary[lessonIndex];
+            Debug.Log($"Loading Scene: {sceneToLoad}");
 
-            if (locationIndex != -1 && lessonIndex != -1)
-            {
-                string sceneName = sceneDictionary[locationIndex]  + lessonDictionary[lessonIndex];
-                Debug.Log($"Loading Scene: {sceneName}");
-                SceneManager.LoadScene(sceneName);   
-            }
-            else if (locationIndex != -1)
-            {
-                Debug.Log("Location not selected");
-            }
-            else if (lessonIndex  != -1)
-            {
-                Debug.Log("Lesson not selected");
-            }
+            StartCoroutine(LoadSceneAsync());     
         }
-        else
+        else if (locationIndex != -1)
         {
-            Debug.Log("ButtonManager not assigned.");
+            Debug.Log("Location not selected");
         }
+        else if (lessonIndex  != -1)
+        {
+            Debug.Log("Lesson not selected");
+        }       
     }
+
+    private IEnumerator LoadSceneAsync()
+       {
+           
+            // Start loading the new scene in the background
+            AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(sceneToLoad);
+            asyncLoad.allowSceneActivation = false; // Don't switch immediately
+
+            // Wait until the scene is loaded
+            while (asyncLoad.progress < 0.9f)
+            {
+                Debug.Log("Looping");
+        
+                yield return null;
+            }
+
+            Debug.Log("Scene ready, waiting additional delay");
+
+            // ✅ Wait for a short time before switching
+            yield return new WaitForSeconds(20f); 
+        
+            // Finally allow scene activation
+            asyncLoad.allowSceneActivation = true;
+                  
+        }
 }
+
+
