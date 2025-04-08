@@ -1,26 +1,38 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class NextSceneTransition : MonoBehaviour
 {
-    [SerializeField] private string nextSceneName; 
+    [SerializeField] private float delayInSeconds = 5f; 
 
-    public void LoadNextScene()
+    private void Start()
     {
-        if (!string.IsNullOrEmpty(nextSceneName))
+        StartCoroutine(LoadNextSceneAsyncAfterDelay());
+    }
+
+    private IEnumerator LoadNextSceneAsyncAfterDelay()
+    {
+        yield return new WaitForSeconds(delayInSeconds);
+
+        int currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
+        int nextSceneIndex = currentSceneIndex + 1;
+
+        if (nextSceneIndex < SceneManager.sceneCountInBuildSettings)
         {
-            if (Application.CanStreamedLevelBeLoaded(nextSceneName))
+            AsyncOperation asyncLoad = SceneManager.LoadSceneAsync(nextSceneIndex);
+            asyncLoad.allowSceneActivation = true;
+
+            while (!asyncLoad.isDone)
             {
-                SceneManager.LoadScene(nextSceneName);
-            }
-            else
-            {
-                Debug.LogError($"Scene '{nextSceneName}' cannot be loaded. Check the name and ensure it's added to build settings.");
+                Debug.Log($"Loading progress: {asyncLoad.progress}");
+                yield return null;
             }
         }
         else
         {
-            Debug.LogError("No scene name provided. Please set the next scene name in the inspector.");
+            Debug.LogError("Next scene index is out of range. Make sure the next scene is added to Build Settings.");
         }
     }
+    
 }
