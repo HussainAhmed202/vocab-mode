@@ -51,9 +51,6 @@ public class ReturnToMainMenu : MonoBehaviour
         // Activate the preloaded scene
         preloadOperation.allowSceneActivation = true;
 
-        // // Wait one frame to ensure scene is loaded
-        // yield return null;
-
         // Wait until scene is fully loaded and activated
         yield return new WaitUntil(() => preloadOperation.isDone);
 
