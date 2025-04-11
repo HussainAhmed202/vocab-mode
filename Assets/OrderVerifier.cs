@@ -36,6 +36,15 @@ public class OrderVerifier : MonoBehaviour
         { "Burger", 4 }
     };
 
+    private Dictionary<string, int> requiredOrder3 = new Dictionary<string, int>
+    {
+        { "ChocolateDonutWithSprinkles", 1 },
+        { "UbeDonut", 1 },
+        { "Lemonade", 1 }
+    };
+
+
+
 
     private string currentOrderNumber = "Empty";
 
@@ -119,6 +128,11 @@ public class OrderVerifier : MonoBehaviour
             requiredOrder = requiredOrder2;
             
         }
+        else if (currentOrderNumber == "Order3Tray")
+        {
+            requiredOrder = requiredOrder3;
+        }
+
 
         
         foreach (var item in requiredOrder)
