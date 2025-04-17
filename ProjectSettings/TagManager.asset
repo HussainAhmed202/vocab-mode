@@ -9,6 +9,7 @@ TagManager:
   - Floor
   - SenderTMP
   - Character
+  - CoffeeCup
   layers:
   - Default
   - TransparentFX
@@ -23,11 +24,11 @@ TagManager:
   - Burger
   - Soda
   - Floor
-  - 
-  - 
-  - 
-  - 
-  - 
+  - Lemonade
+  - Pizza
+  - ChocolateDonutWithSprinkles
+  - ChocolateDonut
+  - UbeDonut
   - 
   - 
   - 
