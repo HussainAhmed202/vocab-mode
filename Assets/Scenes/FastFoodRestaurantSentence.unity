@@ -1067,7 +1067,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1639191952917296178, guid: 64d3f631fb6a5584c9674b444eede706, type: 3}
       propertyPath: enabledHover.fontSize
-      value: 20
+      value: 500
       objectReference: {fileID: 0}
     - target: {fileID: 1639191952917296178, guid: 64d3f631fb6a5584c9674b444eede706, type: 3}
       propertyPath: disabledHover.fontSize
@@ -1075,7 +1075,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1639191952917296178, guid: 64d3f631fb6a5584c9674b444eede706, type: 3}
       propertyPath: enabledActive.fontSize
-      value: 20
+      value: 500
       objectReference: {fileID: 0}
     - target: {fileID: 1639191952917296178, guid: 64d3f631fb6a5584c9674b444eede706, type: 3}
       propertyPath: enabledHover.buttonText
@@ -1099,7 +1099,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1639191952917296178, guid: 64d3f631fb6a5584c9674b444eede706, type: 3}
       propertyPath: enabledInactive.fontSize
-      value: 20
+      value: 500
       objectReference: {fileID: 0}
     - target: {fileID: 1639191952917296178, guid: 64d3f631fb6a5584c9674b444eede706, type: 3}
       propertyPath: disabledHover.fontColor.b
@@ -1156,6 +1156,34 @@ PrefabInstance:
     - target: {fileID: 1639191952917296178, guid: 64d3f631fb6a5584c9674b444eede706, type: 3}
       propertyPath: disabledInactive.fontColor.r
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1639191952917296178, guid: 64d3f631fb6a5584c9674b444eede706, type: 3}
+      propertyPath: Activated.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1639191952917296178, guid: 64d3f631fb6a5584c9674b444eede706, type: 3}
+      propertyPath: Activated.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1639191952917296178, guid: 64d3f631fb6a5584c9674b444eede706, type: 3}
+      propertyPath: Activated.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 992277878}
+    - target: {fileID: 1639191952917296178, guid: 64d3f631fb6a5584c9674b444eede706, type: 3}
+      propertyPath: Activated.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1639191952917296178, guid: 64d3f631fb6a5584c9674b444eede706, type: 3}
+      propertyPath: Activated.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: NextSentence
+      objectReference: {fileID: 0}
+    - target: {fileID: 1639191952917296178, guid: 64d3f631fb6a5584c9674b444eede706, type: 3}
+      propertyPath: Activated.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: SentenceManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 1639191952917296178, guid: 64d3f631fb6a5584c9674b444eede706, type: 3}
+      propertyPath: Activated.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 1639191952917296179, guid: 64d3f631fb6a5584c9674b444eede706, type: 3}
       propertyPath: m_Name
@@ -9547,7 +9575,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1639191952917296178, guid: 64d3f631fb6a5584c9674b444eede706, type: 3}
       propertyPath: enabledHover.fontSize
-      value: 20
+      value: 500
       objectReference: {fileID: 0}
     - target: {fileID: 1639191952917296178, guid: 64d3f631fb6a5584c9674b444eede706, type: 3}
       propertyPath: disabledHover.fontSize
@@ -9555,7 +9583,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1639191952917296178, guid: 64d3f631fb6a5584c9674b444eede706, type: 3}
       propertyPath: enabledActive.fontSize
-      value: 20
+      value: 500
       objectReference: {fileID: 0}
     - target: {fileID: 1639191952917296178, guid: 64d3f631fb6a5584c9674b444eede706, type: 3}
       propertyPath: enabledHover.buttonText
@@ -9579,7 +9607,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1639191952917296178, guid: 64d3f631fb6a5584c9674b444eede706, type: 3}
       propertyPath: enabledInactive.fontSize
-      value: 20
+      value: 500
       objectReference: {fileID: 0}
     - target: {fileID: 1639191952917296178, guid: 64d3f631fb6a5584c9674b444eede706, type: 3}
       propertyPath: disabledHover.fontColor.b
@@ -9636,6 +9664,34 @@ PrefabInstance:
     - target: {fileID: 1639191952917296178, guid: 64d3f631fb6a5584c9674b444eede706, type: 3}
       propertyPath: disabledInactive.fontColor.r
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1639191952917296178, guid: 64d3f631fb6a5584c9674b444eede706, type: 3}
+      propertyPath: Activated.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1639191952917296178, guid: 64d3f631fb6a5584c9674b444eede706, type: 3}
+      propertyPath: Activated.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1639191952917296178, guid: 64d3f631fb6a5584c9674b444eede706, type: 3}
+      propertyPath: Activated.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 992277878}
+    - target: {fileID: 1639191952917296178, guid: 64d3f631fb6a5584c9674b444eede706, type: 3}
+      propertyPath: Activated.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1639191952917296178, guid: 64d3f631fb6a5584c9674b444eede706, type: 3}
+      propertyPath: Activated.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: NextSentence
+      objectReference: {fileID: 0}
+    - target: {fileID: 1639191952917296178, guid: 64d3f631fb6a5584c9674b444eede706, type: 3}
+      propertyPath: Activated.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: SentenceManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 1639191952917296178, guid: 64d3f631fb6a5584c9674b444eede706, type: 3}
+      propertyPath: Activated.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 1639191952917296179, guid: 64d3f631fb6a5584c9674b444eede706, type: 3}
       propertyPath: m_Name
@@ -23391,7 +23447,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1639191952917296178, guid: 64d3f631fb6a5584c9674b444eede706, type: 3}
       propertyPath: enabledHover.fontSize
-      value: 20
+      value: 500
       objectReference: {fileID: 0}
     - target: {fileID: 1639191952917296178, guid: 64d3f631fb6a5584c9674b444eede706, type: 3}
       propertyPath: disabledHover.fontSize
@@ -23399,7 +23455,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1639191952917296178, guid: 64d3f631fb6a5584c9674b444eede706, type: 3}
       propertyPath: enabledActive.fontSize
-      value: 20
+      value: 500
       objectReference: {fileID: 0}
     - target: {fileID: 1639191952917296178, guid: 64d3f631fb6a5584c9674b444eede706, type: 3}
       propertyPath: enabledHover.buttonText
@@ -23423,7 +23479,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1639191952917296178, guid: 64d3f631fb6a5584c9674b444eede706, type: 3}
       propertyPath: enabledInactive.fontSize
-      value: 20
+      value: 500
       objectReference: {fileID: 0}
     - target: {fileID: 1639191952917296178, guid: 64d3f631fb6a5584c9674b444eede706, type: 3}
       propertyPath: disabledHover.fontColor.b
@@ -23480,6 +23536,34 @@ PrefabInstance:
     - target: {fileID: 1639191952917296178, guid: 64d3f631fb6a5584c9674b444eede706, type: 3}
       propertyPath: disabledInactive.fontColor.r
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1639191952917296178, guid: 64d3f631fb6a5584c9674b444eede706, type: 3}
+      propertyPath: Activated.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1639191952917296178, guid: 64d3f631fb6a5584c9674b444eede706, type: 3}
+      propertyPath: Activated.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1639191952917296178, guid: 64d3f631fb6a5584c9674b444eede706, type: 3}
+      propertyPath: Activated.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 992277878}
+    - target: {fileID: 1639191952917296178, guid: 64d3f631fb6a5584c9674b444eede706, type: 3}
+      propertyPath: Activated.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1639191952917296178, guid: 64d3f631fb6a5584c9674b444eede706, type: 3}
+      propertyPath: Activated.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: NextSentence
+      objectReference: {fileID: 0}
+    - target: {fileID: 1639191952917296178, guid: 64d3f631fb6a5584c9674b444eede706, type: 3}
+      propertyPath: Activated.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: SentenceManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 1639191952917296178, guid: 64d3f631fb6a5584c9674b444eede706, type: 3}
+      propertyPath: Activated.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 1639191952917296179, guid: 64d3f631fb6a5584c9674b444eede706, type: 3}
       propertyPath: m_Name
@@ -27246,6 +27330,7 @@ GameObject:
   - component: {fileID: 992277875}
   - component: {fileID: 992277877}
   - component: {fileID: 992277876}
+  - component: {fileID: 992277878}
   m_Layer: 0
   m_Name: ScreenPanel
   m_TagString: Untagged
@@ -27312,6 +27397,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 992277874}
   m_CullTransparentMesh: 1
+--- !u!114 &992277878
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 992277874}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b6adef39f0315144a99191c9a30f347e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sentenceText: {fileID: 2097142341}
+  choiceIndex: {fileID: 2052980029}
 --- !u!1001 &996140333
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -46833,7 +46932,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1639191952917296178, guid: 64d3f631fb6a5584c9674b444eede706, type: 3}
       propertyPath: enabledHover.fontSize
-      value: 20
+      value: 500
       objectReference: {fileID: 0}
     - target: {fileID: 1639191952917296178, guid: 64d3f631fb6a5584c9674b444eede706, type: 3}
       propertyPath: disabledHover.fontSize
@@ -46841,7 +46940,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1639191952917296178, guid: 64d3f631fb6a5584c9674b444eede706, type: 3}
       propertyPath: enabledActive.fontSize
-      value: 20
+      value: 500
       objectReference: {fileID: 0}
     - target: {fileID: 1639191952917296178, guid: 64d3f631fb6a5584c9674b444eede706, type: 3}
       propertyPath: enabledHover.buttonText
@@ -46865,7 +46964,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1639191952917296178, guid: 64d3f631fb6a5584c9674b444eede706, type: 3}
       propertyPath: enabledInactive.fontSize
-      value: 20
+      value: 500
       objectReference: {fileID: 0}
     - target: {fileID: 1639191952917296178, guid: 64d3f631fb6a5584c9674b444eede706, type: 3}
       propertyPath: disabledInactive.fontSize
@@ -46901,15 +47000,31 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1639191952917296178, guid: 64d3f631fb6a5584c9674b444eede706, type: 3}
       propertyPath: Activated.m_PersistentCalls.m_Calls.Array.size
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1639191952917296178, guid: 64d3f631fb6a5584c9674b444eede706, type: 3}
       propertyPath: Activated.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1639191952917296178, guid: 64d3f631fb6a5584c9674b444eede706, type: 3}
+      propertyPath: Activated.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 992277878}
+    - target: {fileID: 1639191952917296178, guid: 64d3f631fb6a5584c9674b444eede706, type: 3}
       propertyPath: Activated.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1639191952917296178, guid: 64d3f631fb6a5584c9674b444eede706, type: 3}
+      propertyPath: Activated.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: NextSentence
+      objectReference: {fileID: 0}
+    - target: {fileID: 1639191952917296178, guid: 64d3f631fb6a5584c9674b444eede706, type: 3}
+      propertyPath: Activated.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: SentenceManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 1639191952917296178, guid: 64d3f631fb6a5584c9674b444eede706, type: 3}
+      propertyPath: Activated.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 1639191952917296179, guid: 64d3f631fb6a5584c9674b444eede706, type: 3}
       propertyPath: m_Name
@@ -56792,17 +56907,14 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 6279387542470760604, guid: 260be0e3dbe5a524c998134a6b21c53d, type: 3}
       insertIndex: -1
       addedObject: {fileID: 419483210}
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 6279387542914970314, guid: 260be0e3dbe5a524c998134a6b21c53d, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 2052980031}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 260be0e3dbe5a524c998134a6b21c53d, type: 3}
 --- !u!114 &2052980026 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6279387542914970316, guid: 260be0e3dbe5a524c998134a6b21c53d, type: 3}
   m_PrefabInstance: {fileID: 2052980025}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2052980030}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 59cd40210326cbb43902b5983e146af5, type: 3}
@@ -56823,30 +56935,12 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 6279387542914970315, guid: 260be0e3dbe5a524c998134a6b21c53d, type: 3}
   m_PrefabInstance: {fileID: 2052980025}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2052980030}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1be29dcf3d803d1498310343dbc8fada, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &2052980030 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 6279387542914970314, guid: 260be0e3dbe5a524c998134a6b21c53d, type: 3}
-  m_PrefabInstance: {fileID: 2052980025}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &2052980031
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2052980030}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 14b14462dd3312c4ab6e3e509c7a002f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  var: {fileID: 2052980029}
 --- !u!4 &2056049421 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1954185702199389827, guid: e0f2df96b7a2b1b4eb0445c0a3be5515, type: 3}
@@ -57938,7 +58032,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: ich ______ den Burger bestellen
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
