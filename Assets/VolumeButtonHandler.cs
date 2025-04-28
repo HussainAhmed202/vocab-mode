@@ -5,7 +5,6 @@ using UnityEngine.UI;
 public class VolumeButtonHandler : MonoBehaviour
 {
     public GameObject screenPanel;
-    public Button volumeOffButton;
 
     public void OnVolumeOffClicked()
     {
