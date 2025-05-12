@@ -18301,11 +18301,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1639191952917296178, guid: 64d3f631fb6a5584c9674b444eede706, type: 3}
       propertyPath: enabledHover.buttonText
-      value: Speisekarte
+      value: Lehrerin
       objectReference: {fileID: 0}
     - target: {fileID: 1639191952917296178, guid: 64d3f631fb6a5584c9674b444eede706, type: 3}
       propertyPath: enabledActive.buttonText
-      value: Speisekarte
+      value: Lehrerin
       objectReference: {fileID: 0}
     - target: {fileID: 1639191952917296178, guid: 64d3f631fb6a5584c9674b444eede706, type: 3}
       propertyPath: enabledHover.fontColor.b
@@ -18353,7 +18353,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1639191952917296178, guid: 64d3f631fb6a5584c9674b444eede706, type: 3}
       propertyPath: enabledInactive.buttonText
-      value: Speisekarte
+      value: Lehrerin
       objectReference: {fileID: 0}
     - target: {fileID: 1639191952917296178, guid: 64d3f631fb6a5584c9674b444eede706, type: 3}
       propertyPath: enabledInactive.fontColor.b
@@ -26891,11 +26891,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1639191952917296178, guid: 64d3f631fb6a5584c9674b444eede706, type: 3}
       propertyPath: enabledHover.buttonText
-      value: Lehrerin
+      value: Speisekarte
       objectReference: {fileID: 0}
     - target: {fileID: 1639191952917296178, guid: 64d3f631fb6a5584c9674b444eede706, type: 3}
       propertyPath: enabledActive.buttonText
-      value: Lehrerin
+      value: Speisekarte
       objectReference: {fileID: 0}
     - target: {fileID: 1639191952917296178, guid: 64d3f631fb6a5584c9674b444eede706, type: 3}
       propertyPath: enabledHover.fontColor.b
@@ -26931,7 +26931,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1639191952917296178, guid: 64d3f631fb6a5584c9674b444eede706, type: 3}
       propertyPath: enabledInactive.buttonText
-      value: Lehrerin
+      value: Speisekarte
       objectReference: {fileID: 0}
     - target: {fileID: 1639191952917296178, guid: 64d3f631fb6a5584c9674b444eede706, type: 3}
       propertyPath: enabledInactive.fontColor.b
@@ -38451,7 +38451,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6020726910918489074, guid: 71cacef91e7957d488f19d862c52040f, type: 3}
       propertyPath: Activated.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_IntArgument
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6020726910918489074, guid: 71cacef91e7957d488f19d862c52040f, type: 3}
       propertyPath: Activated.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
@@ -52422,6 +52422,10 @@ PrefabInstance:
       value: UnityEngine.GameObject, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 6020726910918489074, guid: 71cacef91e7957d488f19d862c52040f, type: 3}
+      propertyPath: Activated.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6020726910918489074, guid: 71cacef91e7957d488f19d862c52040f, type: 3}
       propertyPath: Activated.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_BoolArgument
       value: 1
       objectReference: {fileID: 0}
@@ -57670,7 +57674,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6020726910918489074, guid: 71cacef91e7957d488f19d862c52040f, type: 3}
       propertyPath: Activated.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_IntArgument
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6020726910918489074, guid: 71cacef91e7957d488f19d862c52040f, type: 3}
       propertyPath: Activated.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_BoolArgument
